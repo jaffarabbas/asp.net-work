@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@for (int i = 0; i < 100; i++)
+{
+    <b>@i</b>
+}
+
+<p>Date is : @DateTime.Now</p>
+
+@Html.Partial("form");
+
+@{
+   var a=34343242342342;
+}
+<p>@a</p>
+<h1>@ViewData["obj"]</h1>
+
+@{ 
+    var ob = (WebApplication3.Models.Class1)ViewData["obb"];
+}
+
+<p><b>@ob.id</b></p>
+<p><b>@ob.name</b></p>
+<p><b>@ob.man</b></p>
+

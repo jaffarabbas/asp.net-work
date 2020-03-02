@@ -1,0 +1,28 @@
+﻿
+@model WebApplication4.Models.Class1
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<style>
+    
+
+</style>
+
+<h2 class="hed text-center" style="font-size:20px">Login</h2>
+<div class="main">
+    @using (Html.BeginForm())
+    {
+
+        <p class="1p">@Html.LabelFor(a => a.name) &nbsp; @Html.TextBoxFor(a => a.name, new { @class = "form-control" }) @Html.ValidationMessageFor(a => a.name, "", new { @class = "text-danger" })</p>
+        <p class="1p">@Html.LabelFor(a => a.password) &nbsp; @Html.PasswordFor(a => a.password, new { @class = "form-control" }) @Html.ValidationMessageFor(a => a.password, "", new { @class = "text-danger" })</p>
+
+        <input type="submit" value="Submit" class="btn btn-danger" />
+
+    }
+</div>
+
+@ViewData["mm"]
+
+<p>@mm</p>
